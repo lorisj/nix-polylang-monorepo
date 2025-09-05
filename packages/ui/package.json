@@ -1,0 +1,16 @@
+{
+  "name": "@repo/ui",
+  "version": "1.0.0",
+  "description": "Reusable ui components for monorepo",
+  "devDependencies" : {
+        "tailwindcss" : "catalog:",
+        "@tailwindcss/postcss": "catalog:",
+        "postcss" : "catalog:"
+  },
+  "exports": {
+          "./*" : "./src/*",
+          "./styles.css" : "./styles.css"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0"
+}

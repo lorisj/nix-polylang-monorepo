@@ -1,0 +1,11 @@
+{
+  "name": "@repo/typescript-config",
+  "version": "1.0.0",
+  "description": "typescript config files",
+  "private" : true,
+  "license": "MIT",
+  "exports" : {
+       "./*.json" : "./*.json" 
+  },
+  "packageManager": "pnpm@10.15.0"
+}

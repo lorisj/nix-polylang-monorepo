@@ -1,0 +1,12 @@
+packages:
+  - "apps/*"
+  - "packages/**/*"
+catalog:
+  "react" : "19.1.1"
+  "@types/react" : "19.1.12"
+  "next" : "15.5.2"
+  "@types/node": "24.3.1"
+  "react-dom" : "19.1.1"
+  "tailwindcss" : "4.1.7"
+  "@tailwindcss/postcss" : "4.1.7"
+  "postcss" : "8.5.6"

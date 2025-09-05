@@ -1,0 +1,31 @@
+{
+  "name": "website1",
+  "version": "1.0.0",
+  "description": "nextjs configured website",
+  "dependencies": {
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node" : "catalog:",
+    "@types/react": "catalog:",
+    "tailwindcss" : "catalog:",
+    "@tailwindcss/postcss" : "catalog:",
+    "postcss" : "catalog:",
+    "@repo/typescript-config" : "workspace:*",
+    "@repo/ui" : "workspace:*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0"
+}
