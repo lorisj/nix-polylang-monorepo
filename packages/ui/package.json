@@ -2,22 +2,29 @@
   "name": "@repo/ui",
   "version": "1.0.0",
   "description": "Reusable ui components for monorepo",
-  "devDependencies" : {
-        "tailwindcss" : "catalog:",
-        "@tailwindcss/postcss": "catalog:",
-        "postcss" : "catalog:"
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "exports": {
-          "./*" : "./src/*",
-          "./styles.css" : "./styles.css"
+    "./*": "./src/*",
+    "./base.css": "./base.css"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
-  "nx" : {
-    "targets" : {
-      "build" : {
-        "cache" : true
-       }
+  "nx": {
+    "targets": {
+      "build": {
+        "cache": true
+      }
     }
+  },
+  "dependencies": {
+    "class-variance-authority": "catalog:",
+    "clsx": "catalog:",
+    "lucide-react": "catalog:",
+    "tailwind-merge": "catalog:",
+    "tw-animate-css": "catalog:"
   }
 }
