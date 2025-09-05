@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx dev website1",
+    "startTime": "2025-09-05T02:29:32.124Z",
+    "endTime": "2025-09-05T02:29:43.339Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "website1:dev",
+      "target": "dev",
+      "projectName": "website1",
+      "hash": "15446577284098747899",
+      "startTime": "2025-09-05T02:29:32.129Z",
+      "endTime": "2025-09-05T02:29:43.338Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

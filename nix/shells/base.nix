@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  packages = with pkgs; [ just ];
+  buildInputs = with pkgs; [ just ];
 }

@@ -1,17 +1,18 @@
 { pkgs, lib, ... }:
 let
   base = import ./base.nix { inherit pkgs lib; };
-  safeGetArray = attrSet: attr: (if (attrSet ? attr) then attrSet.attr else [ ]);
-  safeGetString = attrSet: attr: (if (attrSet ? attr) then attrSet.attr else "");
+  safeGetArray = attrSet: attr: (if (attrSet ? ${attr}) then attrSet.${attr} else [ ]);
+  safeGetString = attrSet: attr: (if (attrSet ? ${attr}) then attrSet.${attr} else "");
   deepUnion =
     old: new:
-    base
+    old
     // new
     // {
       packages = (safeGetArray old "packages") ++ (safeGetArray new "packages");
       nativeBuildInputs =
         (safeGetArray old "nativeBuildInputs") ++ (safeGetArray new "nativeBuildInputs");
       commands = (safeGetArray old "commands") ++ (safeGetArray new "commands");
+      buildInputs = (safeGetArray old "buildInputs") ++ (safeGetArray new "buildInputs");
       shellHook = lib.concatStringsSep "\n" [
         (safeGetString old "shellHook")
         (safeGetString new "shellHook")
