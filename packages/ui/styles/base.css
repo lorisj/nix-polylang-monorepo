@@ -1,0 +1,20 @@
+@source "../../..";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+        --color-primary : var(--primary);
+}
+
+@layer base {
+        :root {
+                --primary : oklch(0.92 0.19 114);
+        }
+
+        .dark {
+                --primary : oklch(0.92 1 200);
+        }
+
+}

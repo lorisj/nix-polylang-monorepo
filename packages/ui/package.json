@@ -9,7 +9,7 @@
   },
   "exports": {
     "./*": "./src/*",
-    "./base.css": "./base.css"
+    "./styles/*": "./styles/*"
   },
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
@@ -24,6 +24,7 @@
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "lucide-react": "catalog:",
+    "next-themes": "^0.4.6",
     "tailwind-merge": "catalog:",
     "tw-animate-css": "catalog:"
   }

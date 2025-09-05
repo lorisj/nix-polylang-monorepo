@@ -1,4 +1,4 @@
-import {MyComp} from "@repo/ui/test.tsx"
+import {MyComp} from "@repo/ui/features/base-components/test.tsx"
 
 export default function Page(){
         return (
