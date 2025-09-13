@@ -1,7 +1,7 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/proto",
   "version": "1.0.0",
-  "description": "Reusable ui components for monorepo",
+  "description": "protobuf definitions",
   "devDependencies": {
     "@repo/typescript-config" : "workspace:*",
     "@tailwindcss/postcss": "catalog:",
@@ -11,6 +11,8 @@
   "exports": {
     "./*": "./src/*",
     "./styles/*": "./styles/*"
+  },
+  "scripts":{
   },
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
@@ -22,11 +24,5 @@
     }
   },
   "dependencies": {
-    "class-variance-authority": "catalog:",
-    "clsx": "catalog:",
-    "lucide-react": "catalog:",
-    "next-themes": "^0.4.6",
-    "tailwind-merge": "catalog:",
-    "tw-animate-css": "catalog:"
   }
 }
