@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Reusable ui components for monorepo",
   "devDependencies": {
+    "@types/react": "catalog:",
     "@repo/typescript-config" : "workspace:*",
     "@tailwindcss/postcss": "catalog:",
     "postcss": "catalog:",
     "tailwindcss": "catalog:"
   },
   "exports": {
-    "./*": "./src/*",
+    "./src/*": "./src/*",
     "./styles/*": "./styles/*"
   },
   "license": "MIT",
