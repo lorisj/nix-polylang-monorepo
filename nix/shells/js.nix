@@ -7,7 +7,5 @@
     nodePackages.pnpm
     nodePackages.typescript
     nodePackages.typescript-language-server
-    grpc-tools # protoc and grpc w/node
-    buf
   ];
 }

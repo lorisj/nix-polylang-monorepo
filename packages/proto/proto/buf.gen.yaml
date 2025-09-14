@@ -1,7 +1,0 @@
-version: v1beta1
-plugins:
-  -plugin: es
-   out: packages/proto/generated
-   opt:
-     - target=ts
-
