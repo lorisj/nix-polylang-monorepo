@@ -26,7 +26,7 @@ def serve():
     
     example_pb2_grpc.add_ExampleServiceServicer_to_server(ExampleServiceServicer(), server)
     
-    listen_addr = '[::]:50051'
+    listen_addr = 'localhost:50051'
     server.add_insecure_port(listen_addr)
     
     server.start()

@@ -1,6 +1,6 @@
 
 import "./globals.css"
-import ThemeProvider from "@repo/ui/features/theme/theme-provider.tsx";
+import ThemeProvider from "@repo/ui/src/features/theme/theme-provider";
 export default function Layout({children} : {children : React.ReactNode}) {
         return (
                 <html suppressHydrationWarning lang="en">

@@ -3,21 +3,22 @@
   "version": "1.0.0",
   "description": "nextjs configured website",
   "dependencies": {
+    "@connectrpc/connect": "catalog:",
+    "@connectrpc/connect-node": "catalog:",
+    "@connectrpc/connect-web": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:",
-    "@connectrpc/connect" : "catalog:",
-    "@connectrpc/connect-web" : "catalog:"
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@types/node" : "catalog:",
+    "@repo/proto": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
     "@types/react": "catalog:",
-    "tailwindcss" : "catalog:",
-    "@tailwindcss/postcss" : "catalog:",
-    "postcss" : "catalog:",
-    "@repo/typescript-config" : "workspace:*",
-    "@repo/ui" : "workspace:*",
-    "@repo/proto" : "workspace:*"
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "main": "index.js",
   "scripts": {
@@ -31,11 +32,11 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.15.0",
-  "nx" : {
-    "targets" : {
-      "build" : {
-        "cache" : true
-       }
+  "nx": {
+    "targets": {
+      "build": {
+        "cache": true
+      }
     }
   }
 }
