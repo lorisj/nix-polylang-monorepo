@@ -15,4 +15,9 @@ If you use `grpc/web`: `grpc-web@2.0.1` and `google-protobuf@^3.21.4`. You also 
 
 
 ### Python
+
+If you use `grpc/python`: `pip install grpcio`
+
+If you use `mypy-grpc`: see [here](https://buf.build/community/nipunn1313-mypy-grpc?version=v3.6.0)
+
 If you use `betterproto`: `pip install betterproto`

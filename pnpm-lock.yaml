@@ -111,6 +111,10 @@ importers:
       '@bufbuild/protobuf':
         specifier: 'catalog:'
         version: 2.8.0
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/typescript-config: {}
 

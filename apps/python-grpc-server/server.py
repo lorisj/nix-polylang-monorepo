@@ -1,52 +1,43 @@
-#!/usr/bin/env python3
-"""
-Simple gRPC server using betterproto
-"""
-import asyncio
+import grpc
+from concurrent import futures
 import sys
-from pathlib import Path
+import os
 
-# Add the generated proto files to the path (TODO: find better way to do this)
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "packages" / "proto" / "generated" / "python-grpc"))
+# Add the generated proto directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'packages', 'proto', 'generated', 'python'))
 
-from example.v1 import GetExampleRequest, GetExampleResponse
-import grpclib.server
-from grpclib.server import Server
+from example.v1 import example_pb2_grpc
+from example.v1 import example_pb2
 
 
-class ExampleService:
-    """Implementation of the ExampleService"""
+class ExampleServiceServicer(example_pb2_grpc.ExampleServiceServicer):
     
-    async def GetExample(self, stream) -> None:
-        """Get example method - returns the example_id capitalized"""
-        request = await stream.recv_message()
+    def Example(self, request, context):
+        print(f"Received request with example_id: {request.example_id}")
         
-        # Capitalize the example_id
-        capitalized_id = request.example_id.upper()
+        response = example_pb2.ExampleResponse()
+        response.resp = f"Hello from gRPC server! You sent: {request.example_id}"
         
-        # Create and send the response
-        response = GetExampleResponse(resp=f"Hello! Your ID is: {capitalized_id}")
-        await stream.send_message(response)
+        return response
 
 
-async def main():
-    """Main function to start the gRPC server"""
-    # Create the server
-    server = Server([ExampleService()])
+def serve():
+    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     
-    # Start the server on localhost:50051
-    await server.start("127.0.0.1", 50051)
-    print("gRPC server started on 127.0.0.1:50051")
-    print("Press Ctrl+C to stop the server")
+    example_pb2_grpc.add_ExampleServiceServicer_to_server(ExampleServiceServicer(), server)
+    
+    listen_addr = '[::]:50051'
+    server.add_insecure_port(listen_addr)
+    
+    server.start()
+    print(f"gRPC server started on {listen_addr}")
     
     try:
-        # Keep the server running
-        await server.wait_closed()
+        server.wait_for_termination()
     except KeyboardInterrupt:
-        print("\nShutting down server...")
-        server.close()
-        await server.wait_closed()
+        print("Shutting down server...")
+        server.stop(0)
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+if __name__ == '__main__':
+    serve()

@@ -2,7 +2,7 @@
 
 import { MyComp } from "@repo/ui/src/features/base-components/test";
 import { client } from "../features/grpc-client";
-import { GetExampleRequestSchema } from "@repo/proto/generated/ts-grpc/example/v1/example_pb";
+import { ExampleRequestSchema } from "@repo/proto/generated/ts/example/v1/example_pb";
 import { useState } from "react";
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
                         const request = {
                                 exampleId: "test-123"
                         };
-                        const result = await client.getExample(request);
+                        const result = await client.example(request);
                         setResponse(result.resp);
                 } catch (error) {
                         setResponse(`Error: ${error}`);
