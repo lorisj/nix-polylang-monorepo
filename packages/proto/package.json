@@ -16,8 +16,6 @@
     }
   },
   "dependencies": {
-    "@bufbuild/protobuf": "catalog:",
-    "grpc-web" : "catalog:",
-    "google-protobuf" : "catalog:"
+    "@bufbuild/protobuf": "catalog:"
   }
 }

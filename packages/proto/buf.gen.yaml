@@ -3,15 +3,15 @@ inputs:
   - directory: proto
 plugins:
   # gets plugin from PATH/protoc-gen-es 
-  #- local: protoc-gen-es
-  #  opt: target=ts
-  #  include_imports: true
-  #  out: generated/ts
-  - remote: buf.build/grpc/web:v2.0.1
-    opt: import_style=typescript,mode=grpcwebtext
-    out: generated/ts
+  - local: protoc-gen-es
+    opt: target=ts
+    include_imports: true
+    out: generated/ts-grpc
+  # uncomment and use later when needing to use grpcweb,
+  # more complicated, need to use envoy 
+  #- remote: buf.build/grpc/web:v2.0.1
+  #  opt: import_style=typescript,mode=grpcwebtext
+  #  out: generated/ts-grpc-web
   # gets python plugin from PATH/protoc
-  - remote: buf.build/grpc/python:v1.74.1
-    out: generated/python
-  - remote: buf.build/community/nipunn1313-mypy-grpc:v3.6.0
-    out: generated/python
+  - remote: buf.build/community/danielgtaylor-betterproto:v1.2.5
+    out: generated/python-grpc

@@ -24,4 +24,5 @@ in
 {
   js = buildShellFromPath ./js.nix;
   proto = buildShellFromPath ./proto.nix;
+  python = (buildShellFromPath ./python.nix);
 }
