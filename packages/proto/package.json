@@ -2,18 +2,10 @@
   "name": "@repo/proto",
   "version": "1.0.0",
   "description": "protobuf definitions",
-  "devDependencies": {
-    "@repo/typescript-config" : "workspace:*",
-    "@tailwindcss/postcss": "catalog:",
-    "postcss": "catalog:",
-    "tailwindcss": "catalog:"
-  },
   "exports": {
-    "./*": "./src/*",
-    "./styles/*": "./styles/*"
+    "./generated/*": "./generated/*"
   },
-  "scripts":{
-  },
+  "scripts": {},
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "nx": {
@@ -24,5 +16,8 @@
     }
   },
   "dependencies": {
+    "@bufbuild/protobuf": "catalog:",
+    "grpc-web" : "catalog:",
+    "google-protobuf" : "catalog:"
   }
 }
