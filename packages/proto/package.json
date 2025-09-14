@@ -15,6 +15,9 @@
       }
     }
   },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*"
+  },
   "dependencies": {
     "@bufbuild/protobuf": "catalog:"
   }
