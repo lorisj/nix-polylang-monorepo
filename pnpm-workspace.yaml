@@ -20,3 +20,4 @@ catalog:
   "google-protobuf" : "3.21.4"
   "@connectrpc/connect": "^2.1.0"
   "@connectrpc/connect-web": "^2.1.0"
+  "@connectrpc/connect-node": "^2.1.0"
