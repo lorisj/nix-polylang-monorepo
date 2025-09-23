@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  buildInputs = with pkgs; [ just ];
+  buildInputs = with pkgs; [ 
+    just
+    bashInteractive
+  ];
 }
