@@ -642,6 +642,11 @@ wheels = [
 ]
 
 [[package]]
+name = "python-grpc-bindings"
+version = "0.0.1"
+source = { editable = "../../packages/proto/generated/python" }
+
+[[package]]
 name = "python-grpc-server"
 version = "0.1.0"
 source = { virtual = "." }
@@ -654,6 +659,7 @@ dependencies = [
     { name = "grpclib" },
     { name = "protobuf", version = "5.29.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "protobuf", version = "6.32.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
+    { name = "python-grpc-bindings" },
     { name = "types-protobuf", version = "5.29.1.20241207", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "types-protobuf", version = "6.30.2.20250914", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
 ]
@@ -665,6 +671,7 @@ requires-dist = [
     { name = "grpcio-tools", specifier = ">=1.56.2" },
     { name = "grpclib", specifier = "==0.4.4" },
     { name = "protobuf", specifier = ">=4.25.3" },
+    { name = "python-grpc-bindings", editable = "../../packages/proto/generated/python" },
     { name = "types-protobuf", specifier = ">=4.24" },
 ]
 

@@ -9,8 +9,12 @@ dependencies = [
     "protobuf>=4.25.3",
     "grpcio>=1.56.2",
     "grpcio-tools>=1.56.2",
-    "grpc-stubs>=1.53.0.2"
+    "grpc-stubs>=1.53.0.2",
+    "python-grpc-bindings",
 ]
 
 [tool.uv]
 dev-dependencies = []
+
+[tool.uv.sources]
+python-gRPC-bindings = { path = "../../packages/proto/generated/python", editable = true }
