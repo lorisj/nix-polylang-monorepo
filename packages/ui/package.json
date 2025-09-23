@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Reusable ui components for monorepo",
   "devDependencies": {
-    "@types/react": "catalog:",
-    "@repo/typescript-config" : "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "catalog:",
+    "@types/react": "catalog:",
     "postcss": "catalog:",
     "tailwindcss": "catalog:"
   },
@@ -23,6 +23,7 @@
     }
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "lucide-react": "catalog:",

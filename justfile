@@ -2,6 +2,9 @@
 js-runWeb:
         pnpm nx dev website1
 
+js-addShadcnComp component_name:
+        cd packages/ui; pnpm dlx shadcn@latest add {{component_name}};
+
 # in python shell:
 python-runGrpc:
         echo "Running Python GRPC server:";
