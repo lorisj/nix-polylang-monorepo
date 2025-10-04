@@ -6,6 +6,11 @@
                         "@repo/ui*": [
                                 "./*"
                         ]
-                }
+                },
+                "outDir": "dist",
+                "rootDir": "src",
+                "include": [
+                        "src"
+                ]
         }
 }

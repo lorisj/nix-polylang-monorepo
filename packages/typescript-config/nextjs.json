@@ -1,17 +1,18 @@
 {
-        "$schema" : "https://json.schemastore.org/tsconfig",
-        "extends" : "./base.json",
-        "compilerOptions" : {
-                "target": "ES2017",
-                "lib" : [
+        "$schema": "https://json.schemastore.org/tsconfig",
+        "extends": "./base.json",
+        "compilerOptions": {
+                "target": "esnext",
+                "module": "esnext",
+                "moduleResolution": "node",
+                "noEmit": true,
+                "lib": [
                         "dom",
                         "dom.iterable",
-                        "esnext"
+                        "esnext",
+                        "webworker"
                 ],
-                "module" : "ESNext",
-                "moduleResolution": "node",
-                "allowJs" : true,
-                "jsx" : "preserve",
-                "noEmit": true
+                "allowJs": true,
+                "jsx": "preserve"
         }
 }
