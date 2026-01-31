@@ -13,9 +13,9 @@ let
         (safeGetArray old "nativeBuildInputs") ++ (safeGetArray new "nativeBuildInputs");
       commands = (safeGetArray old "commands") ++ (safeGetArray new "commands");
       buildInputs = (safeGetArray old "buildInputs") ++ (safeGetArray new "buildInputs");
-      shellHook = lib.concatStringsSep "\n" [
-        (safeGetString old "shellHook")
-        (safeGetString new "shellHook")
+      postShellHook = lib.concatStringsSep "\n" [
+        (safeGetString old "postShellHook")
+        (safeGetString new "postShellHook")
       ];
     };
   shellInputs = { inherit pkgs lib; };
@@ -24,5 +24,5 @@ in
 {
   js = buildShellFromPath ./js.nix;
   proto = buildShellFromPath ./proto.nix;
-  python = (buildShellFromPath ./python.nix);
+  python = buildShellFromPath ./python.nix;
 }

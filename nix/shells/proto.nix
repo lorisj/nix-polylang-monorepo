@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   name = "proto";
-  buildInputs = with pkgs; [
+  packages = with pkgs; [
     protoc-gen-es
     protobuf
     buf
