@@ -13,6 +13,6 @@
                         "webworker"
                 ],
                 "allowJs": true,
-                "jsx": "preserve"
+                "jsx": "react-jsx"
         }
 }

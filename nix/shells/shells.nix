@@ -1,8 +1,11 @@
 { pkgs, lib, ... }:
 let
-  base = import ./base.nix { inherit pkgs lib; };
-  safeGetArray = attrSet: attr: (if (attrSet ? ${attr}) then attrSet.${attr} else [ ]);
-  safeGetString = attrSet: attr: (if (attrSet ? ${attr}) then attrSet.${attr} else "");
+  shellInputs = { inherit pkgs lib; };
+  base = import ./base.nix shellInputs;
+
+  safeGetArray = attrSet: attr: if builtins.hasAttr attr attrSet then attrSet.${attr} else [ ];
+  safeGetString = attrSet: attr: if builtins.hasAttr attr attrSet then attrSet.${attr} else "";
+
   deepUnion =
     old: new:
     old
@@ -18,7 +21,6 @@ let
         (safeGetString new "postShellHook")
       ];
     };
-  shellInputs = { inherit pkgs lib; };
   buildShellFromPath = path: pkgs.mkShell (deepUnion base (import path shellInputs));
 in
 {

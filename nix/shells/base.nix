@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  pacakges = with pkgs; [
+  packages = with pkgs; [
     just
     bashInteractive
   ];
